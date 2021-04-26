@@ -1,0 +1,261 @@
+body
+{
+	margin: 0;
+	height: 100%;
+	background-color: #ffffff;
+	font-family: Montserrat;
+}
+
+#pagewrap{
+	width: 100%;
+	height: 100%;
+}
+
+#logo {
+	position: relative;
+	left: 50%;
+    text-align:center;
+    transform: translateX(-50%);
+	display:block;
+
+	/*hc*/
+	width: 20%;
+	height: 10%;
+	top:20%;
+}
+
+#background {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	/*opacity: 0.8;
+	opacity: 0.4;*/
+	opacity: 0.5;
+}
+.month {
+	position: absolute;
+	left: 0px;
+	height: 40px;
+	text-align: left;
+	padding-left: 10px;
+	padding-top:5px;
+	padding-bottom: 5px;
+	width: 100%;
+	border: 1px solid rgb(202,202,202);
+	font-size: 20px;
+	color: white;
+
+	background-color: #92bce0;
+}
+
+.energylabel {
+	font-size: 20px;
+	margin-top: 60px;
+	color: #757575;
+
+}
+
+.energybill {
+	font-size: 45px;
+	margin-top: 10px;
+	color: black;
+	font-weight: bold;
+}
+
+.energydiff {
+	font-size: 30px;
+	color: #9adac3;
+	margin-top:-10px;
+	font-weight:bold;
+}
+#gaugeid{
+	position: relative;
+	left: 50%;
+    text-align:center;
+    transform: translateX(-50%);
+	display:block;
+	color: #757575;
+	height:10%;
+	font-size: 25px;
+	margin-top: 1%;
+	/*font-family: 'Montserrat';*/
+	font-size: 25;
+	font-weight:normal;
+}
+
+#gaugescore{
+	position: relative;
+	left: 50%;
+    text-align:center;
+    transform: translateX(-50%);
+	display:block;
+	color: #cacaca;
+	margin-top: 4px;
+	font-size: 25px;
+}
+
+#gaugewrapper{
+	position: absolute;
+	width:100%;
+	height:100%;
+	left: 50%;
+    text-align:center;
+    transform: translateX(-50%);
+	display:block;
+	box-shadow: 1px 4px 7px 2px rgba(0,0,0,0.1);
+	background-color: white;
+
+
+	overflow: hidden;
+}
+
+#gauge{
+	left: 50%;
+    text-align:center;
+    transform: translateX(-50%);
+    position:flex;
+	height:82%;
+
+
+
+}
+
+#columnchart_material{
+	width: 100%;
+	height:100%;
+	position: absolute;
+	left: 50%;
+    text-align:center;
+    transform: translateX(-50%);
+	display:block;
+	box-shadow: 1px 4px 7px 2px rgba(0,0,0,0.1);
+	background-color: white;
+	padding:10px;
+}
+
+
+#linechart_material{
+	width: 100%;
+	height:100%;
+	padding:10px;
+	position: absolute;
+	left: 50%;
+    text-align:center;
+    transform: translateX(-50%);
+	display:block;
+	box-shadow: 1px 4px 7px 2px rgba(0,0,0,0.1);
+	background-color: white;
+
+}
+
+#bottom{
+	height: 100px;
+}
+
+#pointslabel {
+	position: relative;
+	left: 50%;
+    text-align:center;
+    transform: translateX(-50%);
+	display:block;
+	color: #757575;
+	height:10%;
+	font-size: 20px;
+	margin-top: 25px;
+	/*font-family: 'Montserrat';*/
+	font-size: 25px;
+	font-weight:normal;
+}
+
+#mathlabel {
+	position: relative;
+	left: 50%;
+    text-align:center;
+    transform: translateX(-50%);
+	display:block;
+	color: green;
+	height:10%;
+	font-size: 20px;
+	margin-top: 6px;
+	/*font-family: 'Montserrat';*/
+	font-size: 25;
+	font-weight:normal;
+	color:#cacaca;
+}
+
+#progressbar {
+	left: 50%;
+    text-align:center;
+    transform: translateX(-50%);
+  	width: 85%;
+  	height: 60px;
+  	margin-top: 40px;
+  	margin-bottom: 20px;
+  	position: relative;
+}
+
+#gauge2id{
+	position: relative;
+	left: 50%;
+    text-align:center;
+    transform: translateX(-50%);
+	display:block;
+	color: #757575;
+	height:10%;
+	font-size: 25px;
+	margin-top: 1%;
+	/*font-family: 'Montserrat';*/
+	font-size: 25;
+	font-weight:normal;
+}
+
+#gauge2score{
+	position: relative;
+	left: 50%;
+    text-align:center;
+    transform: translateX(-50%);
+	display:block;
+	color: #cacaca;
+	margin-top: 4px;
+	font-size: 25px;
+}
+
+#gauge2wrapper{
+	position: absolute;
+	width:100%;
+	height:100%;
+	left: 50%;
+    text-align:center;
+    transform: translateX(-50%);
+	display:block;
+	box-shadow: 1px 4px 7px 2px rgba(0,0,0,0.1);
+	background-color: white;
+	padding:2px;
+
+
+	overflow: hidden;
+}
+
+#gauge2{
+	left: 50%;
+    text-align:center;
+
+    transform: translateX(-50%);
+    position:flex;
+	height:84%;
+	width:100%;
+	
+
+}
+
+#columnid {
+	position: relative;
+	margin-top:5px; font-size:20px;
+	left: 50%;
+    text-align:center;
+    transform: translateX(-55%);
+    display:block;
+	color: #757575;
+
+}

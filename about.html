@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>how2saveh2.online-About</title>
+    <link rel="stylesheet" type="text/css" href="styles/aboutstyle.css">
+    <link rel="stylesheet" type="text/css" href="styles/sidebarstyle.css">
+    
+    <script type="text/javascript" src="scripts/jquery-3.4.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+    <!-- <script src="scripts/about.js"></script> -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+    <!-- bootstrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <script src="scripts/sidebarscript.js"></script>
+
+</head>
+        <body>
+            <!-- Popper.JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+            <!-- Bootstrap JS -->
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+
+           <!-- <img src="pics/ocean.jpg" id=background> -->
+
+            <div class="wrapper">
+                <!-- Sidebar -->
+                <nav id="sidebar">
+                    <div class="sidebar-header">
+                        <h2>Welcome Tejas AKA  raspgary</h2>
+                    </div>
+                    <div style="justify-content: center"><img src="pics/profile.jpg" style="border-radius:70px; height: 150px; width: 150px; left: 50%;text-align:center; transform: translateX(30%); border: 3px solid white">
+                    </div>
+
+                    <ul class="list-unstyled components">
+                        <li class="active">
+                            <a href="dashboard.html">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Usage</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu">
+                                <li>
+                                    <a href="shower.html">Shower</a>
+                                </li>
+                                <li>
+                                    <a href="light.html">Light</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="rewards.html">Rewards</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Logout</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div id="pagewrap">
+                   <img src="pics/logo3.jpeg" id="logo">
+                   <!-- <img src="pics/arduino.jpg" id="buddy" style="height:300px; width: 400px;"> -->
+                   <div class="container-fluid" style="margin-bottom: 15px; margin-top:20px;">
+                          <div class="row" style="position:relative; text-align:center; justify-content: center; height: 400px; width: 100%;">
+                            <div class="col-3" style="background-color:#ffffff; justify-content:space-between;box-shadow: 1px 4px 7px 2px rgba(0,0,0,0.1);">
+                                
+                                
+                            <div class="heading">What is howtosaveh2</div>
+                                <div class="description">Howtosaveh2.online is a simple device that effectively helps people track their water consumption. It keeps track of your daily water and light consumption. To encourage people to save water, we have also included a rewards system. A one up for environment-friendly practices.</div>
+
+                            </div>
+
+                            <div style="margin-right: 3%;"></div>
+                            <div class="col-3" style="background-color:#ffffff; justify-content:space-between;box-shadow: 1px 4px 7px 2px rgba(0,0,0,0.1);">
+
+                                <div class="heading">Inspiration</div>
+                                <div class="description"> Around 700 million people in 43 countries suffer today from water scarcity. By 2025,  two-thirds of the world's population could be living under water-stressed conditions. Through a few studies, we understood that cutting down on water usage in the washroom for one minute could result in massively saving 8 litres of water every washroom session. 
+</div>
+
+                            </div>
+                                
+                            <div style="margin-right: 3%;"></div>
+                            <div class="col-3" style="background-color:#ffffff; justify-content:space-between;box-shadow: 1px 4px 7px 2px rgba(0,0,0,0.1);">
+                                <div class="heading">How We Built It</div>
+                                <div class="description" id = "builtit">We sautered an ESP8266 with photoresistor, water-flow sensor, humidity, and temperature sensors to sense light and shower events. The device sends the data to a Firebase database where our website pulls data from. The web app was built with HTML, CSS, JavaScript, Bootstrap, and Google Charts and amCharts APIs. </div>
+                            </div>
+                          </div> 
+
+                    </div>
+
+                    <div class="container-fluid">
+                        <div class="row" style="height:10px;"></div>
+                    </div>
+                    <div class="container-fluid" style="margin-top:15px;">
+                          <div class="row" style="position:relative; text-align:center; justify-content: center; height: 400px; width: 100%; margin-top: 15px; margin-bottom: 15px;">
+                            <div class="col-3" style="background-color:#ffffff; justify-content:space-between;box-shadow: 1px 4px 7px 2px rgba(0,0,0,0.1);">
+                                
+                                <div class="heading">What's Next?</div>
+                                <div class="description">We are looking to include toilet flushing data on top of the shower and light data. In addition, we would like to create an even smaller device with cheaper and waterproof components to further increase practicality. </div>
+
+                            </div>
+
+                            <div style="margin-right: 3%;"></div>
+                            <div class="col-3" style="background-color:#ffffff; justify-content:space-between;box-shadow: 1px 4px 7px 2px rgba(0,0,0,0.1);">
+                                <div class="heading">Challenges/Accomplishments</div>
+                                <div class="description">Figuring out how to assemble the hardware into a small form was one of the most difficult parts. We wanted the hardware to be cost effective and light-weight. We are most proud of the UI/UX design that animates upon loading, giving the app a modern feel. </div>
+
+                            </div>
+                            <div style="margin-right: 3%;"></div>
+                            <div class="col-3" style="background-color:#ffffff; justify-content:space-between;box-shadow: 1px 4px 7px 2px rgba(0,0,0,0.1);">
+                                <div class="heading">What We Learned</div>
+                                <div class="description">We learned to create a dynamic and modern application that helps conserve water. Each one of our team members improved our software and hardware skills. We did research to see what made a modern app visually appealing and attempted for a minimalist look. </div>
+                            </div>
+                          </div> 
+
+                    </div>
+                    <div id="bottom"></div>
+
+ 
+
+
+                </div> 
+
+            </div>
+            
+        </body>
+</html>

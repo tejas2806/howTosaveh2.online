@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>how2saveh2.online-Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="styles/dashboardstyle.css">
+    <link rel="stylesheet" type="text/css" href="styles/sidebarstyle.css">
+    <script type="text/javascript" src="scripts/jquery-3.4.1.min.js"></script>
+
+
+    
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+    
+    <script src="scripts/dashboardscript.js"></script>
+    <script src="scripts/sidebarscript.js"></script>
+
+    <!-- bootstrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+    <script src="scripts/progressbar.min.js"></script>
+    <script src="scripts/progressbar.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+<!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+
+</head>
+        <body>
+            <!-- Popper.JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+            <!-- Bootstrap JS -->
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+
+           <!-- <img src="pics/ocean.jpg" id=background> -->
+
+           <div class="wrapper" style="background-image: url(pics/12.jpg);  height: 100%;background-position: center;  background-repeat: no-repeat; background-size: cover;
+">
+                <!-- Sidebar -->
+                <nav id="sidebar" >
+                    <div class="sidebar-header">
+                        <H2>Welcome Tejas AKA  raspgary</H2>
+                    </div>
+                    <div style="justify-content: center"><img src="pics/profile.jpg" style="border-radius:70px; height: 150px; width: 150px; left: 50%;text-align:center; transform: translateX(30%); border: 3px solid white">
+                    </div>
+
+                    <ul class="list-unstyled components">
+                        <li class="active">
+                            <a href="dashboard.html">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Usage</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu">
+                                <li>
+                                    <a href="shower.html">Shower</a>
+                                </li>
+                                <li>
+                                    <a href="light.html">Light</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="rewards.html">Rewards</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Logout</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div id="pagewrap">
+                    <img src="pics/logo7.png" id="logo">
+                
+
+                    <div class="container-fluid" >
+                          <div class="row" style="position:relative; text-align:center; justify-content: center; height: 280px; width: 100%;">
+                            <div class="col-5" style="background-color:#ffffff; justify-content:space-between; box-shadow: 1px 4px 7px 2px rgba(0,0,0,0.1);">
+                                
+                                <div id="pointslabel">Rewards Points:</div>
+                                
+                                
+                                <div id="mathlabel"></div>
+                                <div id="progressbar"></div>
+
+                            </div>
+
+                            <div style="margin-right: 2%;"></div>
+                            <div class="col-3" style="background-color:#ffffff; justify-content:space-between; box-shadow: 1px 4px 7px 2px rgba(0,0,0,0.1);">
+                                <div class="month">JAN</div>
+                                <div class="energylabel">This month's projected energy bill:</div>
+                                <div class="energybill" id="energy"></div>
+                                <div class="energydiff" id="energyd"></div>
+
+                            </div>
+                            <div style="margin-right: 2%;"></div>
+                            <div class="col-3" style="background-color:#ffffff; justify-content:space-between; box-shadow: 1px 4px 7px 2px rgba(0,0,0,0.1);">
+                                <div class="month">JAN</div>
+                                <div class="energylabel">This month's projected water bill:</div>
+                                <div class="energybill" id="water"></div>
+                                <div class="energydiff" id="waterd"></div>
+                            </div>
+                          </div>
+                            
+
+                    </div>
+                    <div class="container-fluid" style="padding-top:25px; ">
+                          <div class="row" style="text-align:center; justify-content: center; height: 280px; width: 100%;">
+                            <div class="col-4" style="background-color:#ffffff; justify-content:space-between;">
+                                <!-- GAUGE -->
+                                <div id="gaugewrapper">
+                                    <div id="gaugeid">Environmental Score</div>
+                                    <div id="gaugescore"></div>
+                                    <div id="gauge"></div>
+<!--                                     <div id="chart_div" style="width: 600px; height: 600px;"></div>
+                                    <div id="bottom"></div> -->
+
+                                </div>
+                            </div>
+                            <div style="margin-right: 4%;"></div>
+                            <div class="col-7" style="background-color:#ffffff; justify-content: space-between;">
+                                <!-- LINE GRAPH -->
+                                <div id="linechart_material" style="width: 100%; height:100%;"></div>
+                            </div>
+                          </div>
+                            
+
+                    </div>
+                    <div class="container-fluid" style="padding-top:25px;">
+                          <div class="row" style="text-align:center; justify-content: center; height: 280px; width: 100%;">
+                            
+                            <div class="col-3" style="background-color:#ffffff; justify-content:space-between; box-shadow: 1px 4px 7px 2px rgba(0,0,0,0.1);">
+                                <div class="month">Did You Know?</div>
+                                <div class="energylabel" style="color:#636363">If you use a low-flow showerhead, you can save 15 gallons of water during a 10-minute shower.</div>
+                                <img src="pics/lightbulb-icon.png" style="height:70px; width: 70px; margin-top: 10px; opacity: 0.7">
+
+                            </div>
+                            
+                            <div style="margin-right: 2%;"></div>
+                            <div class="col-5" style="background-color:#ffffff; justify-content: space-between;">
+                                <div id="columnchart_material"></div>
+                                <div id="columnid" >Environmental Impact Breakdown</div>
+                            </div>
+                            <div style="margin-right: 2%;"></div>
+                            <div class="col-3" style="background-color:#ffffff; justify-content: space-between;">
+                                <!-- COLUMN CHART -->
+                                <div id="gauge2wrapper">
+                                    <div id="gauge2id">Average Shower Time</div>
+                                    <div id="gauge2score"></div>
+                                    <div id="gauge2"></div>
+<!--                                     <div id="chart_div" style="width: 600px; height: 600px;"></div>
+                                    <div id="bottom"></div> -->
+
+                                </div>
+                            </div>
+                          </div>
+                            
+
+                    </div>
+                    <div id="bottom"></div> 
+
+
+
+                </div>
+
+
+
+                </div> 
+
+            </div>
+
+
+            
+        </body>
+</html
