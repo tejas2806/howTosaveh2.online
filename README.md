@@ -1,5 +1,7 @@
 # How To Save Water Online
 
+# BCS Wallet Address:- 0xe10D6F24479Fa8f2707BAd6B9F08Eb4C715d60AD (Send the whole prize money to this wallet address only)
+
 ## What is How to save Water online
 
 Howtosaveh2.online is a simple device that effectively helps people track their water consumption. It keeps track of your daily water and light consumption. To encourage people to save water, we have also included a rewards system. A one-up for environment-friendly practices.
